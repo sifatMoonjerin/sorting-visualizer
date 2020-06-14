@@ -19,3 +19,4 @@ const mergeSort = (arr) => {
 
 const x = mergeSort([1,2,4,3,7,5,6,7,8])
 console.log(x)
+//test commit 
