@@ -11,7 +11,7 @@ const HeadContainer = ({heading, barNum, changeArray}) => {
                     disabled={heading === 'Sorting...'}
                     onClick={()=>changeArray(shuffle(barNum))}
                     className='btn btn-danger'
-                >Refresh
+                >Shuffle
                 </button>
             </div>
             

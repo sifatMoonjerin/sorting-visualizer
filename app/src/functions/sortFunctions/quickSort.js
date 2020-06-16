@@ -26,6 +26,7 @@ const quickSort = unsortedArray => {
         pi++;
     
         [arr[pi], arr[end]] = [arr[end], arr[pi]];
+        steps.push([...arr]);
         return pi;
     
     }
