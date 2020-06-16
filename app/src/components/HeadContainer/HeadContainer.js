@@ -7,6 +7,9 @@ const HeadContainer = ({heading, barNum, changeArray}) => {
         <div className='headCon'>
             <h1>{heading}</h1>
             <div className='d-flex align-items-center'>
+                <div>
+                    
+                </div>
                 <button 
                     disabled={heading === 'Sorting...'}
                     onClick={()=>changeArray(shuffle(barNum))}
