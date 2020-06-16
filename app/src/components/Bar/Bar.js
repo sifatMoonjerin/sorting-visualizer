@@ -1,9 +1,9 @@
 import React from 'react';
+import './Bar.css';
 
-const Bar = () => {
+const Bar = ({hue, light}) => {
     return (
-        <div>
-            <h2>bar</h2>
+        <div className='bar' style={{'backgroundColor': `hsl(${hue},100%,${light}%)`}}>
         </div>
     );
 };

@@ -1,12 +1,13 @@
 import React from 'react';
 import Bar from '../Bar/Bar';
-import Refresh from '../Refresh/Refresh';
+import './BarContainer.css';
 
-const BarContainer = () => {
+const BarContainer = ({array, hue}) => {
     return (
-        <div>
-            <Refresh/>
-            <Bar/>
+        <div className='barContainer'>
+            {
+                array.map(light => <Bar light={light} hue={hue}/>)
+            }
         </div>
     );
 };
