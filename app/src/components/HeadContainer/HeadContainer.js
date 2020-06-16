@@ -10,7 +10,7 @@ const HeadContainer = ({heading, barNum, changeArray}) => {
                 <button 
                     disabled={heading === 'Sorting...'}
                     onClick={()=>changeArray(shuffle(barNum))}
-                    className='btn btn-secondary'
+                    className='btn btn-danger'
                 >Refresh
                 </button>
             </div>

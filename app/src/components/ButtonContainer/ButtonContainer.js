@@ -7,44 +7,44 @@ import mergeSort from '../../functions/sortFunctions/mergeSort';
 import quickSort from '../../functions/sortFunctions/quickSort';
 
 
-const ButtonContainer = ({array, heading, changeHeading, sortArr}) => {
+const ButtonContainer = ({array, heading, speed, changeHeading, sortArr}) => {
     const handleSort = steps => {
         changeHeading('Sorting...');
         for(let i = 0; i < steps.length; i++){
-            setTimeout(() => sortArr(steps[i]), i*25);
+            setTimeout(() => sortArr(steps[i]), i*speed);
         }
-        setTimeout(() => changeHeading('Sorted!'), steps.length*25);
+        setTimeout(() => changeHeading('Sorted!'), steps.length*speed);
     }
 
     return (
         <div className='btnCon'>
             <button 
                 disabled={heading !== 'Unsorted'}
-                className='btn btn-dark'
+                className='btn btn-success'
                 onClick={()=>handleSort(insertionSort(array))}
             >Insertion Sort
             </button>
             <button 
                 disabled={heading !== 'Unsorted'}
-                className='btn btn-dark'
+                className='btn btn-success'
                 onClick={()=>handleSort(selectionSort(array))}
             >Selection Sort
             </button>
             <button
                 disabled={heading !== 'Unsorted'}
-                className='btn btn-dark' 
+                className='btn btn-success' 
                 onClick={()=>handleSort(bubbleSort(array))}
             >Bubble Sort
             </button>
             <button
                 disabled={heading !== 'Unsorted'}
-                className='btn btn-dark' 
+                className='btn btn-success' 
                 onClick={()=>handleSort(mergeSort(array))}
             >Merge Sort
             </button>
             <button
                 disabled={heading !== 'Unsorted'}
-                className='btn btn-dark' 
+                className='btn btn-success' 
                 onClick={()=>handleSort(quickSort(array))}
             >Quick Sort
             </button>

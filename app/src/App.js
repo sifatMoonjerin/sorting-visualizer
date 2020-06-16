@@ -7,9 +7,10 @@ import HeadContainer from './components/HeadContainer/HeadContainer';
 
 function App() {
   const [array, setArray] = useState([]);
-  const [barNum, setBarNum] = useState(100);
+  const [barNum, setBarNum] = useState(50);
   const [hue, setHue] = useState(240);
-  const [heading, setHeading] = useState('Unsorted')
+  const [speed, setSpeed] = useState(25);
+  const [heading, setHeading] = useState('Unsorted');
 
   useEffect(()=>{
     setArray(shuffle(barNum))
@@ -32,6 +33,7 @@ function App() {
       <ButtonContainer 
         array={array}
         heading={heading}
+        speed={speed}
         changeHeading={h => setHeading(h)}  
         sortArr={arr => setArray(arr)}
       />
