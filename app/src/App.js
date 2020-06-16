@@ -17,8 +17,18 @@ function App() {
   
   return (
     <div className="App">
-      <HeadContainer heading={heading}/>
-      <BarContainer array={array} hue={hue}/>
+      <HeadContainer
+        barNum={barNum}
+        changeArray={arr => {
+          setArray(arr)
+          setHeading('Unsorted')
+        }} 
+        heading={heading}
+      />
+      <BarContainer 
+        array={array}
+        hue={hue}
+      />
       <ButtonContainer 
         array={array}
         heading={heading}

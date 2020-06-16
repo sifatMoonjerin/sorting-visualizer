@@ -1,12 +1,18 @@
 import React from 'react';
 import './HeadContainer.css';
+import shuffle from '../../functions/shuffleFunction/shuffle';
 
-const HeadContainer = ({heading}) => {
+const HeadContainer = ({heading, barNum, changeArray}) => {
     return (
         <div className='headCon'>
             <h1>{heading}</h1>
-            <div>
-                <button className='btn btn-secondary'>Refresh</button>
+            <div className='d-flex align-items-center'>
+                <button 
+                    disabled={heading === 'Sorting...'}
+                    onClick={()=>changeArray(shuffle(barNum))}
+                    className='btn btn-secondary'
+                >Refresh
+                </button>
             </div>
             
         </div>
