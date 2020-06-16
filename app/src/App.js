@@ -10,7 +10,7 @@ function App() {
   const [array, setArray] = useState([]);
   const [barNum, setBarNum] = useState(75);
   const [hue, setHue] = useState(240);
-  const [speed, setSpeed] = useState(25);
+  const [speed, setSpeed] = useState(20);
   const [heading, setHeading] = useState('Unsorted');
 
   useEffect(()=>{
