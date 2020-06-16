@@ -5,6 +5,7 @@ import ButtonContainer from './components/ButtonContainer/ButtonContainer';
 import BarContainer from './components/BarContainer/BarContainer';
 import shuffle from './functions/shuffleFunction/shuffle';
 import HeadContainer from './components/HeadContainer/HeadContainer';
+import Footer from './components/Footer/Footer';
 
 function App() {
   const [array, setArray] = useState([]);
@@ -41,6 +42,7 @@ function App() {
         changeHeading={h => setHeading(h)}  
         sortArr={arr => setArray(arr)}
       />
+      <Footer/>
     </div>
   );
 }
