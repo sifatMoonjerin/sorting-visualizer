@@ -21,6 +21,7 @@ function App() {
       <BarContainer array={array} hue={hue}/>
       <ButtonContainer 
         array={array}
+        heading={heading}
         changeHeading={h => setHeading(h)}  
         sortArr={arr => setArray(arr)}
       />
