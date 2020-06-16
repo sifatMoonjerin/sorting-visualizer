@@ -19,9 +19,11 @@ const mergeSort = unsortedArray => {
         
         resArr = [...resArr,...a,...b]
 
-        unsortedArray.splice(start, end-start,...resArr);
-        const step = [...unsortedArray];
-        steps.push(step);
+        for(let i = 0; i < resArr.length; i++){
+            unsortedArray.splice(start+i, 1,resArr[i]);
+            const step = [...unsortedArray];
+            steps.push(step);
+        }
 
         return resArr;
     }

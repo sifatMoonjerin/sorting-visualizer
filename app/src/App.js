@@ -16,7 +16,7 @@ function App() {
   return (
     <div className="App">
       <BarContainer array={array} hue={hue}/>
-      <ButtonContainer/>
+      <ButtonContainer array={array} sortArr={arr => setArray(arr)}/>
     </div>
   );
 }
