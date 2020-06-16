@@ -1,6 +1,6 @@
 # Sorting Visualizer
 
-###Algorithms:
+### Algorithms:
 - Insertion Sort
 - Selection Sort
 - Bubble Sort
